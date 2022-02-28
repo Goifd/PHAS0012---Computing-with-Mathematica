@@ -1,0 +1,383 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     13950,        375]
+NotebookOptionsPosition[     11875,        333]
+NotebookOutlinePosition[     12608,        359]
+CellTagsIndexPosition[     12565,        356]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["PHAS0012: Computing for Mathematical Physics",
+ FontFamily->"Gill Sans MT",
+ FontSize->44,
+ FontColor->RGBColor[
+  0.9725490196078431, 0.3568627450980392, 0.09803921568627451]]], "Subtitle",
+ CellChangeTimes->{{3.725026163409854*^9, 3.72502616476091*^9}, {
+  3.750177210064226*^9, 3.7501772113992834`*^9}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"78f073b7-f1cd-4f90-adf4-e37c78b61964"],
+
+Cell[TextData[StyleBox["Exercises 4: Functions",
+ FontSize->24,
+ FontColor->GrayLevel[0.5]]], "Title",
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"26271ad9-cd56-4324-97f2-14c66caa6e62"],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ ImageRegion->{{0, 1}, {0, 
+  1}},ExpressionUUID->"f20f29f4-3946-467f-9ab0-b1b98c993f76"],
+
+Cell[TextData[{
+ "Click on the line above and press Shift+Enter to start the exercise with a \
+clean slate. \n Use ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "'s built-in help as much as you like.  "
+}], "Text",
+ ImageRegion->{{0, 1}, {0, 
+  1}},ExpressionUUID->"691593d8-da7a-4c2f-89ff-01d411364ee4"],
+
+Cell["\<\
+Execute the following to obtain the list required for Question 4.\
+\>", "Text",ExpressionUUID->"38f73066-056a-44ac-bc27-2ea2194b261e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"mol", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\"\<a1\>\"", ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\"\<a2\>\"", ",", 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "4", ",", "5"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\"\<a3\>\"", ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "1", ",", "2"}], "}"}]}], "}"}]}], "}"}]}]], "Input",\
+ExpressionUUID->"8ed3a48d-5684-427b-a5c4-8621dc4ef959"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"a1\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"a2\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "4", ",", "5"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"a3\"\>", ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "1", ",", "2"}], "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7262593963533525`*^9},ExpressionUUID->"9a6da9b0-1684-48a4-987f-\
+907bf175a002"]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["1. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Write a function which will have the following action: if it is \
+called with no arguments it will return the string ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\"No arguments\"",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[", with one argument ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\"Too few arguments\",",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" with two arguments ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\"Just right\"",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" and with more than two arguments ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\"Too many arguments\"",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[". Do this in ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["two",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" ways, one involving a single function definition (call this \
+function ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["f1",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[") and an ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["If",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" or ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Which",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" statement, the other involving multiple definitions of the same \
+function for different argument patterns (call this function ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["f2",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[").  Check that both your functions work correctly. For the first \
+way, remember the difference between a list and a sequence.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{
+  3.726259552971225*^9, {3.7262596573727503`*^9, 
+   3.7262596762767086`*^9}},ExpressionUUID->"44d12bc8-3067-45c0-8128-\
+b763b98bab01"],
+
+Cell[TextData[{
+ StyleBox["2. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Define a function which will accept any number of arguments, and \
+will print a message \"This is the n-vector {v1,v2,...}\", where n is the \
+number of arguments and {v1,v2...} is a list of those arguments. Note that \
+your function accepts several arguments, NOT a list.\n  It is probably best \
+to use ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["'s ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Print[ ] ",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["and ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["StringForm[] ",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["commands. Details are available in the on-line help, of course, \
+but ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Print",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" will print its argument and ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["StringForm",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" allows you to insert conversions of variables into strings, as \
+shown below. Basically, for each repeated backward apostrophe pair (",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["``",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[") in the string, ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" substitutes the value of the next variable in its argument list. \
+As an example, try the following:",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.7262596434458437`*^9, 3.726259646108983*^9}, {
+  3.7262605163023863`*^9, 
+  3.726260519642888*^9}},ExpressionUUID->"63c0636a-115e-4fce-a6ad-\
+892e1855a6a4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringForm", "[", 
+  RowBox[{"\"\<Here is the first `` and here is the second ``\>\"", ",", 
+   RowBox[{"Exp", "[", "1", "]"}], ",", 
+   RowBox[{"Exp", "[", "2", "]"}]}], "]"}]], "Input",
+ CellLabel->
+  "In[315]:=",ExpressionUUID->"048dd6bc-8cc7-435d-85bf-68f6474faae4"],
+
+Cell[BoxData[
+ InterpretationBox["\<\"Here is the first \
+\\!\\(\\*RowBox[{\\\"\[ExponentialE]\\\"}]\\) and here is the second \
+\\!\\(\\*SuperscriptBox[\\\"\[ExponentialE]\\\", \\\"2\\\"]\\)\"\>",
+  StringForm["Here is the first `` and here is the second ``", E, E^2],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.6945069695651565`*^9, 3.7262595152285967`*^9, 
+  3.726260523372611*^9, 3.757583276381007*^9},
+ CellLabel->
+  "Out[315]=",ExpressionUUID->"07cf2d0a-e107-4397-935d-90b92e056588"]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["3. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Write a function (which will be a function without any arguments) \
+that will generate a random pair of coordinates (x,y), each in the range -1 \
+to 1, and return 1 if the resulting point lies inside a unit circle centred \
+on the origin and return 0 otherwise.  By calling your function 100000 times, \
+generate an estimate of \[Pi] by calculating the fraction of the results that \
+return 1. You could do this by using ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Sum",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[", with your function as the first argument and an iterator running \
+from 1 to 100000, or in various other ways. Calculate how accurate your \
+estimate is.  This is a very basic example of what is known as Monte Carlo \
+calculation, in which a (more or less) useful result is obtained from a \
+random process.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.694506699748021*^9, 3.694506731219112*^9}, {
+  3.7575837757434063`*^9, 
+  3.757583862740769*^9}},ExpressionUUID->"ade38a76-2f23-41dc-ae52-\
+225ac368d288"],
+
+Cell[TextData[{
+ StyleBox["4. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Write a function that will take two arguments, each of the form \
+{atom,{x,y,z}} where atom is a string representing an atom name and x, y and \
+z are numbers giving the atom's coordinates. Your function should return the \
+distance between the atoms. Use this function, ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Map",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[", and the ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Outer",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" function to generate a matrix of the interatomic distances in the \
+molecule described by ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["mol",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" (see top of sheet). Try to print this matrix in a form that is \
+easy to interpret using the ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["TableForm",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" function with line and column headings (see the Help file) \
+representing the atoms.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.7575851927893133`*^9, 3.757585200766972*^9}, 
+   3.7895439135167046`*^9},ExpressionUUID->"3e868f26-3b64-4059-8ad0-\
+98d1c02020bb"],
+
+Cell[TextData[{
+ StyleBox["5.",
+  FontColor->RGBColor[1, 0, 0]],
+ " ",
+ StyleBox["Set up a ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["recursive",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" function to apply Newton's method to find the roots of an \
+equation.  To solve f(x)=0, the method takes a guess, x0, at the solution, \
+and then improves its guess to x1=x0-f(x0)/f'(x0). Use an ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["iterative method ",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["which stops when f is within 10^-6 of zero. Your function should \
+accept the function name f and an initial guess x0. Remember the difference \
+between the mathematical notation used in the question, where f(x) denotes a \
+function of x, and the ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" notation in which f[x] denotes a function of x.  Test your \
+function by finding a zero of the cosine function from a starting value of \
+1.5.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",ExpressionUUID->"f780d9d6-2808-4b5a-84af-71f62489ab0f"],
+
+Cell[TextData[StyleBox["A.H. Harker, J. Bhamrah\nUCL\nJanuary 2008, revised \
+January 2009, January 2017, January 2018, January 2020",
+ FontColor->RGBColor[0, 1, 0]]], "Text",
+ CellChangeTimes->{{3.442737624*^9, 3.4427376309519997`*^9}, {
+  3.694506932080989*^9, 3.694506942032793*^9}, {3.7262600690132103`*^9, 
+  3.7262600744897084`*^9}, {3.7575861882636633`*^9, 3.7575861903678455`*^9}, {
+  3.789547565312723*^9, 
+  3.789547565790598*^9}},ExpressionUUID->"8dfb1a69-03bc-468f-9172-\
+416c779ae03e"]
+},
+WindowToolbars->{},
+CellGrouping->Manual,
+WindowSize->{640, 677},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+PrintingCopies->1,
+PrintingPageRange->{1, 1},
+ShowCellLabel->True,
+ShowCellTags->False,
+Magnification->1.25,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "ProgrammingLabDefault.nb", 
+  CharacterEncoding -> "UTF-8"],
+PrivateNotebookOptions -> {"ColorPalette" -> {RGBColor, -1}},
+RenderingOptions -> {"ObjectDithering" -> True},
+RenderingOptions -> {"RasterDithering" -> False}
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 451, 9, 184, "Subtitle",ExpressionUUID->"78f073b7-f1cd-4f90-adf4-e37c78b61964"],
+Cell[999, 31, 223, 5, 89, "Title",ExpressionUUID->"26271ad9-cd56-4324-97f2-14c66caa6e62"],
+Cell[1225, 38, 163, 3, 38, "Input",ExpressionUUID->"f20f29f4-3946-467f-9ab0-b1b98c993f76"],
+Cell[1391, 43, 311, 8, 102, "Text",ExpressionUUID->"691593d8-da7a-4c2f-89ff-01d411364ee4"],
+Cell[1705, 53, 144, 2, 73, "Text",ExpressionUUID->"38f73066-056a-44ac-bc27-2ea2194b261e"],
+Cell[CellGroupData[{
+Cell[1874, 59, 540, 16, 67, "Input",ExpressionUUID->"8ed3a48d-5684-427b-a5c4-8621dc4ef959"],
+Cell[2417, 77, 550, 17, 43, "Output",ExpressionUUID->"9a6da9b0-1684-48a4-987f-907bf175a002"]
+}, Open  ]],
+Cell[2982, 97, 2010, 58, 332, "Text",ExpressionUUID->"44d12bc8-3067-45c0-8128-b763b98bab01"],
+Cell[4995, 157, 1875, 51, 389, "Text",ExpressionUUID->"63c0636a-115e-4fce-a6ad-892e1855a6a4"],
+Cell[CellGroupData[{
+Cell[6895, 212, 294, 6, 95, "Input",ExpressionUUID->"048dd6bc-8cc7-435d-85bf-68f6474faae4"],
+Cell[7192, 220, 498, 9, 43, "Output",ExpressionUUID->"07cf2d0a-e107-4397-935d-90b92e056588"]
+}, Open  ]],
+Cell[7705, 232, 1156, 23, 361, "Text",ExpressionUUID->"ade38a76-2f23-41dc-ae52-225ac368d288"],
+Cell[8864, 257, 1339, 34, 303, "Text",ExpressionUUID->"3e868f26-3b64-4059-8ad0-98d1c02020bb"],
+Cell[10206, 293, 1164, 28, 332, "Text",ExpressionUUID->"f780d9d6-2808-4b5a-84af-71f62489ab0f"],
+Cell[11373, 323, 498, 8, 131, "Text",ExpressionUUID->"8dfb1a69-03bc-468f-9172-416c779ae03e"]
+}
+]
+*)
+

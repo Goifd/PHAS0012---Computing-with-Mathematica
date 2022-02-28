@@ -1,0 +1,611 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     24262,        603]
+NotebookOptionsPosition[     22432,        568]
+NotebookOutlinePosition[     23159,        593]
+CellTagsIndexPosition[     23116,        590]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["PHAS0012 Computing for Mathematical Physics  2019/20",
+ 
+ FontSize->42,
+ FontColor->RGBColor[0.5, 0, 0.5]]], "Subtitle",
+ CellChangeTimes->{{3.5037301834501514`*^9, 3.503730186701337*^9}, {
+  3.5345940977848077`*^9, 3.53459410079998*^9}, {3.5661373334375467`*^9, 
+  3.5661373360746975`*^9}, {3.598633645931444*^9, 3.598633648145788*^9}, {
+  3.630045077321138*^9, 3.630045079192218*^9}, {3.6597763975064917`*^9, 
+  3.659776399666247*^9}, {3.692794433742772*^9, 3.6927944378866854`*^9}, {
+  3.7243516618349376`*^9, 3.7243516694148407`*^9}, {3.7553444581999407`*^9, 
+  3.755344476091915*^9}, {3.7879969709946537`*^9, 3.7879969723830533`*^9}, {
+  3.787997003816454*^9, 3.7879970093428535`*^9}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"f9552d78-e144-4c8e-95e5-52f1142e8f1f"],
+
+Cell[TextData[StyleBox["Homework 1",
+ FontColor->GrayLevel[0.5]]], "Title",
+ CellChangeTimes->{{3.5661435160961747`*^9, 3.566143517781271*^9}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"0a518370-fe7e-4acc-9389-360aa41b2e38"],
+
+Cell[TextData[{
+ StyleBox["1.",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[" Integrate ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"sin", "(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"\[Pi]", " ", 
+       RowBox[{
+        SuperscriptBox["t", "2"], "/", "3"}]}], ")"}], "+", " ", 
+     RowBox[{"a", " ", "t"}]}], " ", ")"}], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "9eec6b98-c06d-4bdf-b77d-e8947d8775ef"],
+ StyleBox[" with respect to ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["t",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" from 0 to \[Infinity]. \n",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["[2 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.534594324725788*^9, 3.534594341280735*^9}, {
+   3.5345950769898148`*^9, 3.5345951010041885`*^9}, {3.5661381943897905`*^9, 
+   3.5661382147049522`*^9}, {3.5666558211333065`*^9, 
+   3.5666558242604814`*^9}, {3.659776404696081*^9, 3.6597764056932373`*^9}, {
+   3.659776758449772*^9, 3.659776770327729*^9}, {3.6597768382623377`*^9, 
+   3.659776844537335*^9}, {3.755344633847885*^9, 3.7553446339947667`*^9}, {
+   3.755344668819798*^9, 3.755344669126855*^9}, {3.7553463349884143`*^9, 
+   3.755346343357662*^9}, 3.7553717186699376`*^9, 
+   3.755372413900627*^9},ExpressionUUID->"54e872e5-e637-439f-acda-\
+2db1a4e6c5ad"],
+
+Cell[TextData[{
+ StyleBox["2. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["The answer to Question 1 for real ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["a",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" contains two functions you may not have met before. They are \
+called the Fresnel integrals S and C. Plot ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["FresnelC[(a^2)/8]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" for -8 \[LessEqual] a\[LessEqual] 8. Label the axes with the \
+labels \[OpenCurlyDoubleQuote]x\[CloseCurlyDoubleQuote] and \
+\[OpenCurlyDoubleQuote]y\[CloseCurlyDoubleQuote] - you will need to use \
+Wolfram Documentation to learn how to label the axes - search for \
+\[OpenCurlyDoubleQuote]AxesLabel\[CloseCurlyDoubleQuote].\n",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["[4 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.534595128815779*^9, 3.5345951709251876`*^9}, {
+   3.5345955608544903`*^9, 3.534595577562446*^9}, {3.5345956450783076`*^9, 
+   3.5345956624653025`*^9}, {3.5661382229224224`*^9, 
+   3.5661382794446554`*^9}, {3.566138339826109*^9, 3.566138343326309*^9}, {
+   3.6300451511857157`*^9, 3.630045193873846*^9}, {3.630045296596238*^9, 
+   3.630045308051634*^9}, {3.6597768481538153`*^9, 3.659776888624247*^9}, 
+   3.659776989026363*^9, 3.755344822283682*^9, {3.7553454354662943`*^9, 
+   3.7553454390971165`*^9}, {3.7553456004842954`*^9, 
+   3.7553456027696576`*^9}, {3.7553463666054974`*^9, 3.7553463715922723`*^9}, 
+   3.755372408915989*^9},ExpressionUUID->"b1fa698e-0737-41de-baee-\
+95a447882e36"],
+
+Cell[TextData[{
+ StyleBox["3. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Differentiate ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["FresnelC[(x^2)/8] ",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["once with respect to ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["x",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[", and plot the result and FresnelC",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["[",
+  FontFamily->"Courier",
+  FontSlant->"Plain",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["(x^2)/8",
+  FontFamily->"Courier New",
+  FontSlant->"Plain",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["]",
+  FontFamily->"Courier",
+  FontSlant->"Plain",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" over the range -8\[LessEqual]x\[LessEqual]8 on the same graph. As \
+in the question above label the axes with \[OpenCurlyDoubleQuote]x\
+\[CloseCurlyDoubleQuote] and \
+\[OpenCurlyDoubleQuote]y\[CloseCurlyDoubleQuote]. Since you now have two \
+lines on the same graph you will also need to add a plot legend to \
+distinguish the lines. Look at the information for \
+\[OpenCurlyDoubleQuote]Plot\[CloseCurlyDoubleQuote] and \
+\[OpenCurlyDoubleQuote]PlotLegends\[CloseCurlyDoubleQuote] in the Wolfram \
+Documentation and add a legend to your graph which labels each line according \
+to its expression.",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" \n[6 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.5345957791539764`*^9, 3.534595799339131*^9}, {
+   3.56613837760927*^9, 3.5661383927421355`*^9}, {3.5661385013033447`*^9, 
+   3.5661386082024593`*^9}, {3.566142883007964*^9, 3.566142883423988*^9}, {
+   3.6300468469639683`*^9, 3.6300469630291862`*^9}, {3.6597769834369087`*^9, 
+   3.659776993946291*^9}, {3.6612323980957747`*^9, 3.661232400088546*^9}, 
+   3.6616051029346266`*^9, {3.755345626271027*^9, 3.755345653271433*^9}, 
+   3.755345686870573*^9, 3.755345761888859*^9, 3.755345832906616*^9, {
+   3.7553463899922256`*^9, 3.7553463959538703`*^9}, 
+   3.755372402496462*^9},ExpressionUUID->"8af16b8b-80ca-49c4-ad8b-\
+7fa9b7660761"],
+
+Cell[TextData[{
+ StyleBox["4.",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[" Solve the equation ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  RowBox[{
+   StyleBox[" ",
+    FontColor->RGBColor[0, 0, 1]], 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{"(", 
+        RowBox[{"x", "+", "4"}], ")"}],
+       FontFamily->"Times New Roman"], "4"], 
+     StyleBox["+",
+      FontFamily->"Times New Roman"], 
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{"(", 
+        RowBox[{"x", "-", "2"}], ")"}],
+       FontFamily->"Times New Roman"], "4"]}], "=", "60"}]}]],
+  CellChangeTimes->{{3.534596764334326*^9, 3.534596776958048*^9}, {
+    3.5345968170133386`*^9, 3.5345968295660563`*^9}, 3.534596977144498*^9},
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "1e780f41-aa90-4690-a22d-a77d6735e0ce"],
+ StyleBox[". \n",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["[2 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.5345970580541253`*^9, 3.5345971606769953`*^9}, 
+   3.5345972166581964`*^9, {3.53459736864789*^9, 3.534597369205922*^9}, {
+   3.56613906085635*^9, 3.566139110961215*^9}, {3.65977744759354*^9, 
+   3.65977745396877*^9}, {3.661231036106001*^9, 3.6612310575991173`*^9}, {
+   3.7553462713712454`*^9, 3.75534628215646*^9}, {3.7553463997232103`*^9, 
+   3.755346412669281*^9}, 
+   3.755372399586048*^9},ExpressionUUID->"3dc9c590-65b0-4d78-ba86-\
+9d70b28deca0"],
+
+Cell[TextData[{
+ StyleBox["5. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Solve the simultaneous equations\n 3 ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     RowBox[{"x", "-", 
+      RowBox[{"3", "y"}], "+", 
+      RowBox[{"19", "z"}]}], "=", "1"}],
+    FontColor->RGBColor[0, 0, 1]], TraditionalForm]],ExpressionUUID->
+  "8653974c-7153-4bca-b05b-43b4ae2763ce"],
+ StyleBox["\n ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     RowBox[{"y", "-", 
+      RowBox[{"5", "x"}], "+", 
+      RowBox[{"9", "z"}]}], "=", 
+     RowBox[{"-", "102"}]}],
+    FontColor->RGBColor[0, 0, 1]], TraditionalForm]],ExpressionUUID->
+  "b3d5528c-5818-49c4-a664-fa43ea8657cb"],
+ StyleBox["\n ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "+", "y", "-", 
+     RowBox[{"3", 
+      SuperscriptBox["z", "2"]}]}], "=", "22"}], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "0bb9ab36-efbb-4b96-9f78-3ce5ea3af3fd"],
+ StyleBox["\n",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["[4 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.5345984889219666`*^9, 3.5345986190194073`*^9}, 
+   3.5345986615048375`*^9, {3.5661393597704463`*^9, 3.5661393700860367`*^9}, {
+   3.5661395800300446`*^9, 3.566139582342177*^9}, {3.566139727951505*^9, 
+   3.56613975268392*^9}, {3.5661432346640778`*^9, 3.5661432404114065`*^9}, {
+   3.630050412329116*^9, 3.63005041950554*^9}, 3.6597777757451153`*^9, {
+   3.6612311667476263`*^9, 3.661231167194573*^9}, {3.755346435543828*^9, 
+   3.7553464369736443`*^9}, 
+   3.7553723937285786`*^9},ExpressionUUID->"96f07679-cdc7-4613-abc1-\
+f5ce15757d77"],
+
+Cell[TextData[{
+ StyleBox["6. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Find the limit of ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"sinh", "(", 
+     FractionBox["1", "x"], ")"}], " ", 
+    RowBox[{"log", "(", "x", ")"}]}], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "056446c0-ec40-4dbb-b24a-e65369d3684e"],
+ StyleBox[" as ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["x",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" tends to zero both from above and from below.",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" \n[2 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.5345966069233217`*^9, 3.534596608129391*^9}, {
+   3.5661386844208183`*^9, 3.56613869877664*^9}, {3.5661387361777787`*^9, 
+   3.5661387399129925`*^9}, {3.566138875126726*^9, 3.566138883159186*^9}, {
+   3.630047042130542*^9, 3.630047042674408*^9}, {3.659777189775364*^9, 
+   3.6597772009530354`*^9}, {3.6597772680017633`*^9, 3.659777301626933*^9}, {
+   3.661231058703518*^9, 3.661231058823023*^9}, {3.6612311690665293`*^9, 
+   3.6612311694743834`*^9}, {3.7553464577258806`*^9, 3.7553464634554014`*^9}, 
+   3.7553723911810675`*^9},ExpressionUUID->"d7073afd-f9e2-4c01-82be-\
+b946b2d4f609"],
+
+Cell[TextData[{
+ StyleBox["7. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Expand ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["tan(x)sin(",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SqrtBox["x"], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "2a1a74b4-821f-44f7-a811-0e93fd9fbf97"],
+ StyleBox[") in powers of ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["x",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" up to ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    SuperscriptBox["x", "5"],
+    FontFamily->"Courier New"], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "ecf29055-85a7-48be-ba22-b314d7842146"],
+ StyleBox[" around the value ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["x = 0",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[".",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\n[2 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.5345966069233217`*^9, 3.534596608129391*^9}, {
+   3.5661386844208183`*^9, 3.56613869877664*^9}, {3.5661387361777787`*^9, 
+   3.5661387399129925`*^9}, {3.566138875126726*^9, 3.566138883159186*^9}, {
+   3.630047042130542*^9, 3.630047042674408*^9}, {3.659777189775364*^9, 
+   3.6597772009530354`*^9}, {3.6597772680017633`*^9, 3.659777301626933*^9}, {
+   3.661231058703518*^9, 3.661231058823023*^9}, {3.6612311690665293`*^9, 
+   3.6612311694743834`*^9}, {3.7553464577258806`*^9, 
+   3.7553464634554014`*^9}, {3.755346739189579*^9, 3.755346835677616*^9}, {
+   3.75534687991181*^9, 3.7553468984093976`*^9}, {3.755346974925316*^9, 
+   3.755346975378747*^9}, 
+   3.7553723877970676`*^9},ExpressionUUID->"56bb7e66-c8b3-432a-b0e2-\
+461efa2b67fc"],
+
+Cell[TextData[{
+ StyleBox["8.",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["  Integrate  1/(15 ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", 
+     RowBox[{"2", "  "}]], "-", 
+    RowBox[{"7", "x"}], "-", "2"}], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "7ea368b6-b67b-46a8-b7d5-272b5a7f6aff"],
+ StyleBox[") with respect to ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "c4c0f92a-9807-4f6e-a0a8-527266411b76"],
+ StyleBox[" analytically. Then express the integrand in terms of partial \
+fractions, in which the denominators are linear in ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["x",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[".  Integrate the partial fractions with respect to ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["x",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[". Verify that the two integrals are the same by writing an \
+expression which ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" will evaluate  to ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["True",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[". ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["  \n[6 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.5345972741664863`*^9, 3.534597315892873*^9}, {
+   3.5345975328072796`*^9, 3.5345975336543283`*^9}, {3.534597587400402*^9, 
+   3.534597668880062*^9}, {3.5346556013153667`*^9, 3.5346556018393965`*^9}, {
+   3.5661391840093937`*^9, 3.566139200572341*^9}, 3.566139256100517*^9, {
+   3.5661433580491347`*^9, 3.566143359680228*^9}, {3.5661434735947437`*^9, 
+   3.5661435078847046`*^9}, {3.630049698208152*^9, 3.630049698271352*^9}, 
+   3.6597776854200583`*^9, {3.661231173827116*^9, 3.661231174130063*^9}, {
+   3.6612312061297607`*^9, 3.661231229698752*^9}, {3.6612313000012007`*^9, 
+   3.66123135003123*^9}, {3.6612314894307003`*^9, 3.661231538446451*^9}, {
+   3.661232235673648*^9, 3.661232265239593*^9}, {3.6612323695550957`*^9, 
+   3.661232379529069*^9}, {3.6927943534565506`*^9, 3.6927943589361467`*^9}, {
+   3.7553470264753447`*^9, 3.7553471033335085`*^9}, 3.75537238115242*^9},
+ ImageRegion->{{0, 1}, {0, 
+  1}},ExpressionUUID->"3e206ece-cd13-4db5-b7ee-5995485c9413"],
+
+Cell[TextData[{
+ StyleBox["9. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[" ",
+  FontColor->RGBColor[0, 0, 1]],
+ "  ",
+ StyleBox["Solve the differential equation ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "2"], 
+    FractionBox[
+     SuperscriptBox["d", "2"], 
+     RowBox[{"d", " ", 
+      SuperscriptBox["x", "2"]}]], "y", 
+    FormBox[
+     RowBox[{
+      RowBox[{
+       RowBox[{"+", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["x", "2"], "-", "3"}], ")"}]}], "y"}], "=", "0"}],
+     TraditionalForm]}], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "86721622-fccf-4bcd-b0ed-96a7fb836362"],
+ StyleBox[". \nYou will find that the solution contains two terms, involving \
+special functions of mathematical physics which you may not have met before, \
+and two coefficients ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["C[1] ",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["and ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["C[2]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[".\n\nPlot the functions which appear multiplied by ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["C[1]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" and ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["C[2]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" (without the coefficients ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["C[1]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" and ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["C[2]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[") over the range 0 \[LessEqual]x\[LessEqual]50.\nConsider using \
+the option \[OpenCurlyQuote]PlotRange -> Full\[CloseCurlyQuote] and explain \
+why it is or is not useful in this situation.\nConfirm what the graphs seem \
+to show by finding the limits of the special functions as  ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["x ",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\[Rule]0. You may need to use the option, \
+\[OpenCurlyQuote]Direction.\[CloseCurlyQuote]\nBe sure to label the axes of \
+your plots, and to label your plots (hint: the PlotLabel argument can be used \
+to title graphs).\n\nDeduce what the value of ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["C[2]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" must be if the solution is to equal 0 at ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["x",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["=0 and is equal to 1 at ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["x",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["=1.\nFind an expression for ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["C[1]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" satisfying the same conditions.",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\n[16 marks]\n",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.5037306416533585`*^9, 3.50373069150821*^9}, 
+   3.5345988761631155`*^9, {3.534599080819821*^9, 3.5345994186801453`*^9}, {
+   3.5345994555222526`*^9, 3.5345994752903833`*^9}, {3.534599576487171*^9, 
+   3.534599576487171*^9}, {3.534654383081688*^9, 3.53465440113272*^9}, {
+   3.5346546764134655`*^9, 3.534654778217288*^9}, {3.5346548312923236`*^9, 
+   3.534654927935851*^9}, {3.566139824439024*^9, 3.566139882307334*^9}, {
+   3.5661399367144456`*^9, 3.566139944795908*^9}, {3.566142813512989*^9, 
+   3.566142817997246*^9}, {3.56614324799784*^9, 3.566143249355918*^9}, {
+   3.566143392828124*^9, 3.56614345079344*^9}, {3.5666548372096615`*^9, 
+   3.5666548372096615`*^9}, {3.6300526448169394`*^9, 
+   3.6300526843193827`*^9}, {3.630058306404663*^9, 3.6300583779335833`*^9}, {
+   3.6300585254073563`*^9, 3.6300585254628973`*^9}, {3.659777861128001*^9, 
+   3.659777864758369*^9}, {3.659778343163137*^9, 3.659778343430314*^9}, {
+   3.6597783844369907`*^9, 3.659778424903121*^9}, {3.659778470711179*^9, 
+   3.6597785369777946`*^9}, {3.6597786412301273`*^9, 3.659778644995962*^9}, {
+   3.659778684701877*^9, 3.659778685100935*^9}, {3.659779081345916*^9, 
+   3.659779108092935*^9}, {3.692795858305083*^9, 3.692795866023882*^9}, {
+   3.692820813776164*^9, 3.6928209194153285`*^9}, {3.7243515308824687`*^9, 
+   3.724351558993345*^9}, {3.7553715247412963`*^9, 3.7553715698837805`*^9}, {
+   3.755371692957364*^9, 3.755371698757723*^9}, {3.75537229158352*^9, 
+   3.755372345809147*^9}},ExpressionUUID->"fb6a2429-d46c-402f-9c6f-\
+25375284fc87"],
+
+Cell[TextData[{
+ StyleBox["Solutions are due by 4pm on Monday January 20th.\n",
+  FontWeight->"Bold",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Make a copy of your solutions with the output deleted (",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Cell|Delete All Output",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[") and upload that file to Moodle.\nPlease name the file to include \
+your family name and first name, for example I would use ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["hw1_Jasvir_Bhamrah",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[".\n\nThe first thing I shall do when I get the file is to click ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Evaluation|Evaluate Notebook, ",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["so make sure the file you send me will survive that.",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.503730245604706*^9, 3.503730325411271*^9}, {
+   3.5345941263694425`*^9, 3.5345941296526303`*^9}, {3.5345941661737194`*^9, 
+   3.534594292303933*^9}, {3.5661374978679514`*^9, 3.5661375008041196`*^9}, {
+   3.56613754556868*^9, 3.5661375460287066`*^9}, {3.599220431927211*^9, 
+   3.5992204640659513`*^9}, {3.630052618158764*^9, 3.630052618798644*^9}, {
+   3.661587364363779*^9, 3.661587364419736*^9}, {3.6927943978000965`*^9, 
+   3.692794414806959*^9}, {3.7243508007521615`*^9, 3.7243508231957707`*^9}, 
+   3.755371514949849*^9, {3.7553737474424534`*^9, 3.7553737476366043`*^9}, {
+   3.7879969810918536`*^9, 
+   3.7879969822316537`*^9}},ExpressionUUID->"cd86b857-9370-478a-8a56-\
+0dbd8329ffff"],
+
+Cell[TextData[StyleBox["J. Bhamrah, J Underwood, L McKemmish\nUCL\nJanuary \
+2020",
+ FontColor->RGBColor[0, 1, 0]]], "Text",
+ CellChangeTimes->{{3.5037302971356535`*^9, 3.5037302983437223`*^9}, {
+  3.5345941347899237`*^9, 3.5345941350249376`*^9}, {3.566137504202314*^9, 
+  3.566137504417326*^9}, {3.599220450479176*^9, 3.59922045434016*^9}, {
+  3.630045083392784*^9, 3.630045083488679*^9}, {3.661587370291191*^9, 
+  3.6615873851737347`*^9}, {3.6927943644398565`*^9, 3.6927943766477604`*^9}, {
+  3.724350826570629*^9, 3.72435082690285*^9}, {3.7553715165690684`*^9, 
+  3.75537151725473*^9}, {3.7879969881304536`*^9, 
+  3.7879969892390537`*^9}},ExpressionUUID->"c488da91-9770-4f16-8329-\
+db5c40d03c78"]
+},
+WindowToolbars->{},
+CellGrouping->Manual,
+WindowSize->{798, 848},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+ShowCellLabel->True,
+ShowCellTags->False,
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "ProgrammingLabDefault.nb", 
+  CharacterEncoding -> "UTF-8"],
+PrivateNotebookOptions -> {"ColorPalette" -> {RGBColor, -1}},
+RenderingOptions -> {"ObjectDithering" -> True},
+RenderingOptions -> {"RasterDithering" -> False}
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 835, 14, 127, "Subtitle",ExpressionUUID->"f9552d78-e144-4c8e-95e5-52f1142e8f1f"],
+Cell[1383, 36, 264, 5, 96, "Title",ExpressionUUID->"0a518370-fe7e-4acc-9389-360aa41b2e38"],
+Cell[1650, 43, 1379, 35, 61, "Text",ExpressionUUID->"54e872e5-e637-439f-acda-2db1a4e6c5ad"],
+Cell[3032, 80, 1618, 33, 127, "Text",ExpressionUUID->"b1fa698e-0737-41de-baee-95a447882e36"],
+Cell[4653, 115, 2109, 50, 150, "Text",ExpressionUUID->"8af16b8b-80ca-49c4-ad8b-7fa9b7660761"],
+Cell[6765, 167, 1425, 39, 58, "Text",ExpressionUUID->"3dc9c590-65b0-4d78-ba86-9d70b28deca0"],
+Cell[8193, 208, 1721, 49, 127, "Text",ExpressionUUID->"96f07679-cdc7-4613-abc1-f5ce15757d77"],
+Cell[9917, 259, 1276, 31, 66, "Text",ExpressionUUID->"d7073afd-f9e2-4c01-82be-b946b2d4f609"],
+Cell[11196, 292, 1784, 48, 61, "Text",ExpressionUUID->"56bb7e66-c8b3-432a-b0e2-461efa2b67fc"],
+Cell[12983, 342, 2441, 59, 127, "Text",ExpressionUUID->"3e206ece-cd13-4db5-b7ee-5995485c9413"],
+Cell[15427, 403, 4654, 115, 392, "Text",ExpressionUUID->"fb6a2429-d46c-402f-9c6f-25375284fc87"],
+Cell[20084, 520, 1642, 33, 196, "Text",ExpressionUUID->"cd86b857-9370-478a-8a56-0dbd8329ffff"],
+Cell[21729, 555, 699, 11, 81, "Text",ExpressionUUID->"c488da91-9770-4f16-8329-db5c40d03c78"]
+}
+]
+*)
+

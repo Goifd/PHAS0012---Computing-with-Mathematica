@@ -1,0 +1,400 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     14101,        392]
+NotebookOptionsPosition[     12191,        356]
+NotebookOutlinePosition[     12919,        381]
+CellTagsIndexPosition[     12876,        378]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["PHAS0012: Computing for Mathematical Physics",
+ FontFamily->"Gill Sans MT",
+ FontSize->44,
+ FontColor->RGBColor[
+  0.9725490196078431, 0.3568627450980392, 0.09803921568627451]]], "Subtitle",
+ CellChangeTimes->{{3.725026163409854*^9, 3.72502616476091*^9}, {
+  3.750177210064226*^9, 3.7501772113992834`*^9}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"fa8e06d0-427c-4183-ae5b-a12d313317ce"],
+
+Cell[TextData[StyleBox["Exercises 3: Rules and Patterns",
+ FontSize->24,
+ FontColor->GrayLevel[0.5]]], "Title",
+ CellChangeTimes->{{3.7250261822449865`*^9, 3.7250261855482492`*^9}, {
+  3.725523734132538*^9, 3.7255237431305532`*^9}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"22a72fcf-5201-48d4-bc48-4e47892c5f32"],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pidx", "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{"ToExpression", ",", 
+     RowBox[{"Drop", "[", 
+      RowBox[{
+       RowBox[{"Characters", "[", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"N", "[", 
+          RowBox[{"\[Pi]", ",", "10000"}], "]"}], "]"}], "]"}], ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"pid", "=", 
+   RowBox[{"Drop", "[", 
+    RowBox[{
+     RowBox[{"Characters", "[", 
+      RowBox[{"ToString", "[", 
+       RowBox[{"N", "[", 
+        RowBox[{"\[Pi]", ",", "100"}], "]"}], "]"}], "]"}], ",", 
+     RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}]}], "Input",
+ ImageRegion->{{0, 1}, {0, 
+  1}},ExpressionUUID->"4b5d7758-7825-4d9d-8468-c23698e0b1e8"],
+
+Cell[TextData[{
+ "Click on the box above and press Shift+Enter to start the exercise with a \
+clean slate and with the lists used in some of the later questions already \
+defined. \nUse ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "'s built-in help as much as you like.\nYou will probably find ",
+ StyleBox["Head",
+  FontFamily->"Courier New"],
+ " and ",
+ StyleBox["FullForm",
+  FontFamily->"Courier New"],
+ " useful in the later questions."
+}], "Text",
+ CellChangeTimes->{{3.7255238673219223`*^9, 3.725523868537799*^9}, {
+  3.7891133588264847`*^9, 3.78911335992459*^9}},
+ ImageRegion->{{0, 1}, {0, 
+  1}},ExpressionUUID->"9e57c226-4444-4e9a-8920-a3bdfe212c43"],
+
+Cell[TextData[{
+ StyleBox["1. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Solve the quadratic simultaneous equations\n      x^2 - a y^2 = 0\n\
+      b x^2 + y = 1\n      for x and y.\n   Take the second set of solutions \
+and\n      a) check that they satisfy the initial equations\n      b) find \
+numerical values for x and y in the case in which a=2 and b=4.  Assign these \
+values to xs and ys.\n      c) check again, by substituting the values of a, \
+b, xs and ys into the equations that the initial equations are satisfied.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.6941077703657146`*^9, 3.6941077806776094`*^9}, {
+  3.7255238909413123`*^9, 
+  3.725523898284461*^9}},ExpressionUUID->"9357b934-d8d8-4014-92c0-\
+9ae1cc05babb"],
+
+Cell[TextData[{
+ StyleBox["2.",
+  FontColor->RGBColor[1, 0, 0]],
+ " ",
+ StyleBox["Solve the coupled differential equations (a first-order \
+formulation of the van der Pol equation, describing a non-linear oscillator)\n\
+       ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["dx/dt = y\n   dy/dt = \[Mu] (1-x^2) y - x",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\n",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["numerically",
+  FontVariations->{"Underline"->True},
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" for \[Mu]=1/2 and initial values ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["x[0]=0",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" and ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["y[0]=2",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" for values of ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["t",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" between 0 and 20.\n   Plot a graph of ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["y[t]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" against ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["x[t]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" over the same range (note: this is a ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["ParametricPlot",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[").",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.7255285032809663`*^9, 
+  3.7255285371488085`*^9}},ExpressionUUID->"43fea59c-35dd-4f35-9d1c-\
+cf444ff9e34e"],
+
+Cell[TextData[{
+ StyleBox["3.",
+  FontColor->RGBColor[1, 0, 0]],
+ " ",
+ StyleBox["Set up the matrix  {{a,b,c},{d,e,f},{g,h,i}}. Use a rule to swap \
+rows 2 and 3. ",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",ExpressionUUID->"b70ef2bf-7622-4db8-9267-b25278e61cb2"],
+
+Cell[TextData[{
+ StyleBox["4. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["The Fibonacci numbers satisfy the recurrence relation  ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["F", "n"], "=", 
+    RowBox[{
+     SubscriptBox["F", 
+      RowBox[{"n", "-", "1"}]], "+", 
+     SubscriptBox["F", 
+      RowBox[{"n", "-", "2"}]]}]}], TraditionalForm]], "InlineFormula",
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "aa702c36-a7e8-4e15-aa6c-58d50bd338b6"],
+ StyleBox[" with ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["F", "1"], "=", 
+    RowBox[{
+     SubscriptBox["F", "2"], "=", "1"}]}], TraditionalForm]], "InlineFormula",
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "f175b637-87fc-4de4-bcd8-285f3546d56b"],
+ StyleBox[". Thus the first few numbers in the sequence are \
+1,1,2,3,5,8,13,21.  Set up a rule-based scheme for evaluating the nth \
+Fibonacci number and find the 9th Fibonacci number.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.725541260600828*^9, 
+  3.7255412798341656`*^9}},ExpressionUUID->"9754af6c-445a-4664-b16c-\
+42f4fcd5b781"],
+
+Cell[TextData[{
+ StyleBox["5.",
+  FontColor->RGBColor[1, 0, 0]],
+ " ",
+ StyleBox["The rule ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["s[-x_]\[RuleDelayed]-s[x]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" transforms ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["s[-a]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" to ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["-s[a]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[", but it does not work for ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["s[-3]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" or ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["s[-3.0]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[". Why is this? You may find the ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["FullForm",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["  or ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Head",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" functions useful. What do you expect that this rule will do to ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["s[1-x]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" and to ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["s[-1-x]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" and why?",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.7570761232010508`*^9, 
+  3.7570761244142885`*^9}},ExpressionUUID->"e38d5339-5950-4fab-a834-\
+a2336d535d7f"],
+
+Cell[TextData[{
+ StyleBox["6. ",
+  FontColor->RGBColor[1, 0, 0]],
+ " ",
+ StyleBox["Generate a rule for forming the complex conjugate of a complex \
+number. Test it on exp(i x) and a + 2i b (Remember that ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["'s notation for i, the square root of -1, is I or \[ImaginaryI]; \
+note that you are not intended to use ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["'s built-in function ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Conjugate",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["). You may assume that x, a and b are real. You may find the ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["FullForm",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["  useful.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.725542642445901*^9, 3.7255426428967266`*^9}, {
+  3.757076137414154*^9, 
+  3.757076137861853*^9}},ExpressionUUID->"1632e2c2-e39f-43f1-980a-\
+9da23721d5f2"],
+
+Cell[TextData[{
+ StyleBox["7. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Write a rule which is similar to the built-in Union function, but \
+which does not reorder the elements in the list. It should merely drop any \
+second and subsequent occurrences of any element.  Test your function on the \
+list ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["pid",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[".",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",ExpressionUUID->"b8b934ef-ca41-4a0a-b6b5-2c1316ce6495"],
+
+Cell[TextData[{
+ StyleBox["8.",
+  FontColor->RGBColor[1, 0, 0]],
+ " ",
+ StyleBox["Write rules that implement the data compression method known as \
+run-length encoding, that is, for every run of repeated characters replace \
+the run by a list of the form {character, number of repeats}. Do this by \
+first using converting each entry to the form {character,1} and then adding \
+counts where successive entries share the same character. Apply this to the \
+list ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["pid",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[", in which each entry is a one-character string.\n Then write a \
+rule to undo the encoding. Apply it to your encoded version, to recover the \
+original 'message' (you may need to Flatten the result) and compare it with \
+the original ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["pid",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[".",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",ExpressionUUID->"f3e89a2d-7072-4fa1-8a46-1a7a6abb2348"],
+
+Cell[TextData[{
+ StyleBox["9. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["The list ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["pidx",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" gives the first 1000 digits of \[Pi]. Use a rule to locate the \
+first occurrence of the sequence 1,2,3, returning the answer in the form \
+{number of digits before the sequence, {1,2,3}, number of digits after the \
+sequence}.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{
+  3.725545673946725*^9},ExpressionUUID->"e23c969f-416f-44d2-9bb2-\
+4d66fbabb57d"],
+
+Cell[TextData[StyleBox["A.H. Harker, J. Bhamrah\nUCL\nJanuary 2005, revised \
+January 2009, January 2017, January 2018, January 2020",
+ FontColor->RGBColor[0, 1, 0]]], "Text",
+ CellChangeTimes->{{3.442136302976*^9, 3.4421363092320004`*^9}, {
+  3.6941078578287635`*^9, 3.6941078709887457`*^9}, {3.725523756607485*^9, 
+  3.725523761250493*^9}, {3.7501772184559097`*^9, 3.7501772224080505`*^9}, {
+  3.7570761719241247`*^9, 3.757076178641469*^9}, {3.7891307059855537`*^9, 
+  3.789130706502212*^9}},ExpressionUUID->"8aec2e2e-b074-4c55-8d0b-\
+c1466668509e"]
+},
+WindowToolbars->{},
+CellGrouping->Manual,
+WindowSize->{800, 857},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+ShowCellLabel->True,
+ShowCellTags->False,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "ProgrammingLabDefault.nb", 
+  CharacterEncoding -> "UTF-8"],
+PrivateNotebookOptions -> {"ColorPalette" -> {RGBColor, -1}},
+RenderingOptions -> {"ObjectDithering" -> True},
+RenderingOptions -> {"RasterDithering" -> False}
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 451, 9, 145, "Subtitle",ExpressionUUID->"fa8e06d0-427c-4183-ae5b-a12d313317ce"],
+Cell[999, 31, 353, 7, 71, "Title",ExpressionUUID->"22a72fcf-5201-48d4-bc48-4e47892c5f32"],
+Cell[1355, 40, 832, 23, 75, "Input",ExpressionUUID->"4b5d7758-7825-4d9d-8468-c23698e0b1e8"],
+Cell[2190, 65, 669, 17, 104, "Text",ExpressionUUID->"9e57c226-4444-4e9a-8920-a3bdfe212c43"],
+Cell[2862, 84, 760, 14, 219, "Text",ExpressionUUID->"9357b934-d8d8-4014-92c0-9ae1cc05babb"],
+Cell[3625, 100, 1628, 51, 148, "Text",ExpressionUUID->"43fea59c-35dd-4f35-9d1c-cf444ff9e34e"],
+Cell[5256, 153, 264, 7, 35, "Text",ExpressionUUID->"b70ef2bf-7622-4db8-9267-b25278e61cb2"],
+Cell[5523, 162, 1169, 33, 84, "Text",ExpressionUUID->"9754af6c-445a-4664-b16c-42f4fcd5b781"],
+Cell[6695, 197, 1611, 54, 81, "Text",ExpressionUUID->"e38d5339-5950-4fab-a834-a2336d535d7f"],
+Cell[8309, 253, 1142, 32, 104, "Text",ExpressionUUID->"1632e2c2-e39f-43f1-980a-9da23721d5f2"],
+Cell[9454, 287, 534, 13, 81, "Text",ExpressionUUID->"b8b934ef-ca41-4a0a-b6b5-2c1316ce6495"],
+Cell[9991, 302, 1050, 24, 173, "Text",ExpressionUUID->"f3e89a2d-7072-4fa1-8a46-1a7a6abb2348"],
+Cell[11044, 328, 589, 16, 81, "Text",ExpressionUUID->"e23c969f-416f-44d2-9bb2-4d66fbabb57d"],
+Cell[11636, 346, 551, 8, 81, "Text",ExpressionUUID->"8aec2e2e-b074-4c55-8d0b-c1466668509e"]
+}
+]
+*)
+

@@ -1,0 +1,362 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     13093,        354]
+NotebookOptionsPosition[     11278,        319]
+NotebookOutlinePosition[     12006,        344]
+CellTagsIndexPosition[     11963,        341]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["PHAS0012: Computing for Mathematical Physics",
+ FontFamily->"Gill Sans MT",
+ FontSize->42,
+ FontColor->RGBColor[
+  0.9725490196078431, 0.3568627450980392, 0.09803921568627451]]], "Subtitle",
+ CellChangeTimes->{{3.725026163409854*^9, 3.72502616476091*^9}, {
+  3.7501768869889984`*^9, 3.750176888970873*^9}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"e21276d3-3bb8-464d-ba66-b0d836203ae6"],
+
+Cell[TextData[StyleBox["Exercises 2: Lists",
+ FontSize->24,
+ FontColor->RGBColor[
+  0.34901960784313724`, 0.34901960784313724`, 0.34901960784313724`]]], "Title",
+ CellChangeTimes->{{3.7250261822449865`*^9, 3.7250261855482492`*^9}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"26fe7b0a-a28c-40ca-b936-e50e14b3fda3"],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"In[1]:=",ExpressionUUID->"bda176e0-bda8-40c6-8dc0-21d97789d551"],
+
+Cell[TextData[{
+ "Click on the line above and press Shift+Enter to start the exercise with a \
+clean slate. \n Use ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "'s built-in help as much as you like."
+}], "Text",
+ ImageRegion->{{0, 1}, {0, 
+  1}},ExpressionUUID->"f9603110-3f2f-4298-ae6f-4cee98e7e5b2"],
+
+Cell["\<\
+The exercises use the following lists: execute the following cell to generate \
+the list, but do not edit it in any way.\
+\>", "Text",ExpressionUUID->"a7fcd645-542e-4b55-a98c-ef536d793033"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"mat", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"d", ",", "e", ",", "f"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"g", ",", "h", ",", "i"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vec", "=", 
+   RowBox[{"{", 
+    RowBox[{"I", ",", "\[Pi]", ",", "E"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"coins", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "5", ",", "10", ",", "20", ",", "50", ",", "100"}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"names", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<Fred\>\"", ",", "\"\<Smith\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Ali\>\"", ",", "\"\<Khan\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Marie\>\"", ",", "\"\<Lefrant\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Joe\>\"", ",", "\"\<Bloggs\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Humphrey\>\"", ",", "\"\<Earwicker\>\""}], "}"}]}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pd", "=", 
+   RowBox[{"ToExpression", "[", 
+    RowBox[{"Delete", "[", 
+     RowBox[{
+      RowBox[{"Characters", "[", 
+       RowBox[{"ToString", "[", 
+        RowBox[{"N", "[", 
+         RowBox[{"Pi", ",", "1000"}], "]"}], "]"}], "]"}], ",", "2"}], "]"}], 
+    "]"}]}], ";"}]}], "Input",
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellLabel->"In[3]:=",ExpressionUUID->"288be9a4-a6c5-4188-9146-8b6a7be8c059"],
+
+Cell[TextData[{
+ StyleBox["1. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Using the matrix ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["mat",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" and the vector ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["vec",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" given above:\n     a) extract the second row of",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" mat",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\n     b) extract the second column of ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["mat",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[", using ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Transpose",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\n     d) take the matrix product of",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" mat",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" with ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["vec",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\n     e) take the scalar product of ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["vec mat vec",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\n      f) confirm that ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["vec.transpose(mat) = mat.vec.",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{
+  3.725026389163756*^9, 3.725026432230874*^9, {3.72502650353864*^9, 
+   3.725026505878393*^9}, 3.725026581057786*^9, {3.7556194905571184`*^9, 
+   3.7556194952767134`*^9}},ExpressionUUID->"2389db12-ad95-41c8-b07f-\
+a91371351c04"],
+
+Cell[TextData[{
+ StyleBox["2. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["The list ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["coins",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" gives the values in pence of the coins in circulation in the UK \
+up to a value of \[Sterling]1. How many different values from zero up to and \
+including \[Sterling]2 can be made up using three coins or fewer (the coins \
+need not all be different but at least one coin must be used)?\n\nForm the \
+list of values up to and including \[Sterling]2 that cannot be made up in \
+this way. How many are there? \n\nWhat is the smallest and what is the \
+largest in the range that cannot be made?\n\nCheck that the sum of the number \
+that can be made and the number that cannot is 201.  Expect to use ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Outer, Flatten, Union, Intersection, Complement, Count, and Table \
+or Range.",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.6622769793024893`*^9, 3.662276979350587*^9}, 
+   3.6934807536325617`*^9, 
+   3.755622794646541*^9},ExpressionUUID->"34ec4c69-2678-4f72-8088-\
+f77f117d7991"],
+
+Cell[TextData[{
+ StyleBox["3.",
+  FontColor->RGBColor[1, 0, 0]],
+ " ",
+ StyleBox["Sort the list ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["names",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" into alphabetical order of second names. Do this by using the ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["RotateLeft and RotateRight",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" functions as well as ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Sort",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[".",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.662276988622664*^9, 
+  3.662276992863001*^9}},ExpressionUUID->"232130a1-1608-484b-9cc4-\
+b871c84f6f36"],
+
+Cell[TextData[{
+ StyleBox["4. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["The list ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["pd",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" contains the first thousand digits in the decimal representation \
+of \[Pi]. Generate a table giving the frequencies of the digits 0 to 9 in \
+that list. Check that the total of the frequencies is 1000.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",ExpressionUUID->"717c5bab-ded6-4b2f-8831-1310a092319c"],
+
+Cell[TextData[{
+ StyleBox["5. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Generate a table of 1000 random integers in the range 1 to 1000 \
+(use the ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Help",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" file on ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Random",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" if necessary). Count how many are prime numbers. How many \
+distinct prime numbers are there in the list? Generate a list of the form \
+{{first prime number, number of occurrences in original list},{second \
+prime,..}..}.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",ExpressionUUID->"89b6db5c-4104-4b83-a1db-54fb0b717cf1"],
+
+Cell[TextData[{
+ StyleBox["6. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["The time taken by ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" can increase quite rapidly for complex tasks. Explore this, using \
+the fact that ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Timing[task;]",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" will return an expression of the form ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["{3.1 Second,Null}",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[". \nGenerate a list (table) of the times taken to simplify the \
+expansion of ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+     "a", "+", "b", "+", "c", "+", "d", " ", "+", " ", "e", " ", "+", " ", 
+      "f", "+", "8"}], ")"}], "n"], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "5be59cfa-05a7-4cf6-a425-889a3e88e652"],
+ StyleBox[" for n running from 1 to 12, and plot the result.\nNote: ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" is clever about remembering results it has obtained before, so if \
+you generate the table of times a second time it will be much quicker. Get \
+around this by choosing a different integer instead of 8 in the expansion for \
+subsequent runs, or better yet, use the ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["ClearSystemCache",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" function which you can just place at the start of your cell.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.6307441574837303`*^9, 3.630744167643982*^9}, {
+  3.630744231924098*^9, 3.63074424562845*^9}, {3.630769773419956*^9, 
+  3.6307697927342987`*^9}, {3.6935138656583223`*^9, 
+  3.6935138929384117`*^9}},ExpressionUUID->"fa1a8fad-5990-4936-ac57-\
+de2f3887f127"],
+
+Cell[TextData[StyleBox["A.H. Harker, J Underwood, J Bhamrah\nUCL\nJanuary \
+2008, revised January 2009, January 2015, January 2017, January 2018, January \
+2020",
+ FontColor->RGBColor[0, 1, 0]]], "Text",
+ CellChangeTimes->{{3.4399608711436*^9, 3.4399608777686*^9}, {
+  3.630744176107012*^9, 3.630744183202963*^9}, {3.693512661936099*^9, 
+  3.693512670336668*^9}, {3.7250270721338305`*^9, 3.7250270907205257`*^9}, {
+  3.750176897007962*^9, 3.7501769016998887`*^9}, {3.755623858820218*^9, 
+  3.755623866396721*^9}, {3.7884671719840703`*^9, 
+  3.7884671733593893`*^9}},ExpressionUUID->"5ed0008b-746f-4c3d-8296-\
+083ee71fcf6b"]
+},
+WindowToolbars->{},
+CellGrouping->Manual,
+WindowSize->{640, 677},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+ShowCellLabel->True,
+ShowCellTags->False,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "ProgrammingLabDefault.nb", 
+  CharacterEncoding -> "UTF-8"],
+PrivateNotebookOptions -> {"ColorPalette" -> {RGBColor, -1}},
+RenderingOptions -> {"ObjectDithering" -> True},
+RenderingOptions -> {"RasterDithering" -> False}
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 451, 9, 143, "Subtitle",ExpressionUUID->"e21276d3-3bb8-464d-ba66-b0d836203ae6"],
+Cell[999, 31, 352, 7, 71, "Title",ExpressionUUID->"26fe7b0a-a28c-40ca-b936-e50e14b3fda3"],
+Cell[1354, 40, 183, 3, 30, "Input",ExpressionUUID->"bda176e0-bda8-40c6-8dc0-21d97789d551"],
+Cell[1540, 45, 309, 8, 81, "Text",ExpressionUUID->"f9603110-3f2f-4298-ae6f-4cee98e7e5b2"],
+Cell[1852, 55, 199, 3, 58, "Text",ExpressionUUID->"a7fcd645-542e-4b55-a98c-ef536d793033"],
+Cell[2054, 60, 1623, 49, 150, "Input",ExpressionUUID->"288be9a4-a6c5-4188-9146-8b6a7be8c059"],
+Cell[3680, 111, 1732, 53, 150, "Text",ExpressionUUID->"2389db12-ad95-41c8-b07f-a91371351c04"],
+Cell[5415, 166, 1189, 25, 309, "Text",ExpressionUUID->"34ec4c69-2678-4f72-8088-f77f117d7991"],
+Cell[6607, 193, 758, 24, 58, "Text",ExpressionUUID->"232130a1-1608-484b-9cc4-b871c84f6f36"],
+Cell[7368, 219, 515, 12, 81, "Text",ExpressionUUID->"717c5bab-ded6-4b2f-8831-1310a092319c"],
+Cell[7886, 233, 740, 19, 104, "Text",ExpressionUUID->"89b6db5c-4104-4b83-a1db-54fb0b717cf1"],
+Cell[8629, 254, 2019, 51, 242, "Text",ExpressionUUID->"fa1a8fad-5990-4936-ac57-de2f3887f127"],
+Cell[10651, 307, 623, 10, 104, "Text",ExpressionUUID->"5ed0008b-746f-4c3d-8296-083ee71fcf6b"]
+}
+]
+*)
+
